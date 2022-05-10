@@ -1,0 +1,10 @@
+### POST ACTOR
+
+POST http://localhost:3000/actors
+Content-type: application/json
+
+{
+  "first_name": "Tommy",
+  "last_name": "Wiseau",
+  "known_for": "The Room"
+}
