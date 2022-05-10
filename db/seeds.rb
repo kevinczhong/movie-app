@@ -10,6 +10,10 @@
 # Actor.create({ first_name: "Matt", last_name: "Damon", known_for: "Good Will Hunting" })
 # Actor.create({ first_name: "Brad", last_name: "Pitt", known_for: "Moneyball" })
 
+# 10.times do
+#   Actor.create({ first_name: "#{FFaker::Name.first_name}", last_name: "#{FFaker::Name.last_name}", known_for: "#{FFaker::Movie.title}" })
+# end
+
 10.times do
-  Actor.create({ first_name: "#{FFaker::Name.first_name}", last_name: "#{FFaker::Name.last_name}", known_for: "#{FFaker::Movie.title}" })
+  Movie.create({ title: "#{FFaker::Movie.title}", year: rand(1920..2022), plot: "plot goes here" })
 end
