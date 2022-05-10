@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# Actor.create({ first_name: "Benedict", last_name: "Cumberbatch", known_for: "Sherlock" })
+# Actor.create({ first_name: "Matt", last_name: "Damon", known_for: "Good Will Hunting" })
+# Actor.create({ first_name: "Brad", last_name: "Pitt", known_for: "Moneyball" })
+
+10.times do
+  Actor.create({ first_name: "#{FFaker::Name.first_name}", last_name: "#{FFaker::Name.last_name}", known_for: "#{FFaker::Movie.title}" })
+end
