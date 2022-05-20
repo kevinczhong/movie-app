@@ -14,6 +14,8 @@ class MoviesController < ApplicationController
       title: params["title"],
       year: params["year"],
       plot: params["plot"],
+      director: params["director"],
+      english: params["true"],
     )
     render json: movie.as_json
   end
@@ -24,6 +26,8 @@ class MoviesController < ApplicationController
       title: params["title"] || movie.title,
       year: params["year"] || movie.year,
       plot: params["plot"] || movie.plot,
+      director: params["director"],
+      english: params["true"],
     )
     movie.save
     render json: movie.as_json
