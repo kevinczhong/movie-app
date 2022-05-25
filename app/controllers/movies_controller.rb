@@ -1,12 +1,12 @@
 class MoviesController < ApplicationController
   def index
-    movies = Movie.all
-    render json: { movies: movies }
+    @movies = Movie.all
+    render template: "movies/index"
   end
 
   def show
-    movie = Movie.find_by(id: params["id"])
-    render json: { movie: movie }
+    @movie = Movie.find_by(id: params["id"])
+    render template: "movies/show"
   end
 
   def create

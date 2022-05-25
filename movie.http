@@ -1,10 +1,10 @@
 ### INDEX MOVIE
 
-GET http://localhost:3000/movies
+GET http://localhost:3000/movies.json
 
 ### SHOW MOVIE
 
-GET http://localhost:3000/movies/1
+GET http://localhost:3000/movies/1.json
 
 ###  POST MOVIE
 

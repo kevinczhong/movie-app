@@ -47,3 +47,5 @@ group :development do
 end
 
 gem "ffaker"
+
+gem "jb"
