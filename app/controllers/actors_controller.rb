@@ -5,7 +5,7 @@ class ActorsController < ApplicationController
   end
 
   def index
-    @actors = Actor.all
+    @actors = Actor.order(:age)
     render template: "actors/index"
   end
 

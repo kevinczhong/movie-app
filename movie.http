@@ -19,12 +19,15 @@ Content-type: application/json
 
 ### PATCH MOVIE
 
-PATCH http://localhost:3000/movies/11
+PATCH http://localhost:3000/movies/10
 Content-type: application/json
 
 {
   "title": "Forrest Gump",
-  "plot": "The story of the most serendipitous man on Earth."
+  "year": 1994,
+  "plot": "The story of the most serendipitous man on Earth.",
+  "director": "Robert Zemeckis",
+  "english": true
 }
 
 ### DELETE MOVIE

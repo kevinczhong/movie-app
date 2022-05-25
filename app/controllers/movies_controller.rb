@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.where(english: true)
     render template: "movies/index"
   end
 
@@ -30,8 +30,8 @@ class MoviesController < ApplicationController
       title: params["title"] || movie.title,
       year: params["year"] || movie.year,
       plot: params["plot"] || movie.plot,
-      director: params["director"],
-      english: params["true"],
+      director: params["director"] || movie.director,
+      english: params["english"] || movie.english,
     )
     if movie.save
       render json: movie.as_json
