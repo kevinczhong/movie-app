@@ -53,3 +53,5 @@ end
 gem "ffaker"
 
 gem "jb"
+
+gem "active_model_serializers"
