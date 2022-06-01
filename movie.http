@@ -1,50 +1,57 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTQxNTU0NzZ9.pX8r8ZO2BRsUw853CGC977zNj_okQqAG8JHv2RHC5MU
+
 ### INDEX MOVIE
 
 GET http://localhost:3000/movies.json
+Authorization: Bearer {{jwt}}
 
 ### SHOW MOVIE
 
 GET http://localhost:3000/movies/1.json
+Authorization: Bearer {{jwt}}
 
 ###  POST MOVIE
 
 POST http://localhost:3000/movies
+Authorization: Bearer {{jwt}}
 Content-type: application/json
 
 {
-  "title": "Speed",
-  "year": 1994,
-  "plot": "Where a bomb is a speed demon."
+  "title": "Dr. Strangelove",
+  "year": 1964,
+  "director": "Stanley Kubrick",
+  "plot": "How we loved to learn the bomb."
 }
 
 ### PATCH MOVIE
 
-PATCH http://localhost:3000/movies/10
+PATCH http://localhost:3000/movies/12
+Authorization: Bearer {{jwt}}
 Content-type: application/json
 
 {
-  "title": "Forrest Gump",
-  "year": 1994,
-  "plot": "The story of the most serendipitous man on Earth.",
-  "director": "Robert Zemeckis",
   "english": true
 }
 
 ### DELETE MOVIE
 
 DELETE http://localhost:3000/movies/11
+Authorization: Bearer {{jwt}}
 
 ### SHOW ACTOR
 
 GET http://localhost:3000/actors/11
+Authorization: Bearer {{jwt}}
 
 ### INDEX ACTOR
 
 GET http://localhost:3000/actors
+Authorization: Bearer {{jwt}}
 
 ### POST ACTOR
 
 POST http://localhost:3000/actors
+Authorization: Bearer {{jwt}}
 Content-type: application/json
 
 {
@@ -56,6 +63,7 @@ Content-type: application/json
 ### PATCH ACTOR
 
 PATCH http://localhost:3000/actors/11
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -65,3 +73,4 @@ Content-Type: application/json
 ### DELETE ACTOR
 
 DELETE http://localhost:3000/actors/11
+Authorization: Bearer {{jwt}}
